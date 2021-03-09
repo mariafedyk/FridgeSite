@@ -15,7 +15,7 @@
 <body>
 
 <!--    Header-->
-    <nav>
+    <nav class="fix">
         <div class="logo">
             <a href="#">Ремонт холодильників</a>
             <p>Без вихідних з 9:00 - 19:00</p>
@@ -24,8 +24,8 @@
             <div class="close-menu">
                 <img src="images/close.svg" alt="close-img">
             </div>
-            <li class="nav-item"><a href="#services">Послуги</a></li>
-            <li class="nav-item"><a href="#info">Інформація</a></li>
+            <li class="nav-item"><a href="#advantages-container">Наші переваги</a></li>
+            <li class="nav-item"><a href="#work-scheme">Схема роботи</a></li>
             <li class="nav-item"><a href="#feedback">Контакти</a></li>
             <div class="phone-wrap mobile">
                 <p class="width-phone">
@@ -55,6 +55,42 @@
                 <p>Виїзд в день звернення</p>
             </div>
         </div>
+
+        <div class="advant-cont" id="advantages-container">
+            <h2>Наші переваги</h2>
+            <div class="advantages">
+                <div class="item person"><span>Працюємо без посередників.</span></div>
+                <div class="item car"><span>Широкий регіон роботи.</span></div>
+                <div class="item quality"><span>Швидко. Якісно. Недорого.</span></div>
+                <div class="item experience"><span>Великий досвід ремонту холодильників.</span></div>
+            </div>
+        </div>
+
+        <div class="work-scheme" id="work-scheme">
+            <div class="scheme-overlay"></div>
+            <div class="scheme-content">
+                <h2>Схема роботи</h2>
+                <div class="work-line">
+                    <div class="work-point"><p><b>1.</b> Ви телефонуєте нам.</p></div>
+                    <img src="images/down-arrow.svg" width="35px" alt="down">
+                    <div class="work-point"><p><b>2.</b> Ми домовляємося про виїзд нашого майстра до Вас додому.</p></div>
+                    <img src="images/down-arrow.svg" width="35px" alt="down">
+                    <div class="work-point"><p><b>3.</b> На місці діагностуємо поломку.</p></div>
+                    <img src="images/down-arrow.svg" width="35px" alt="down">
+                    <div class="work-point"><p><b>4.</b> Називаємо вартість роботи.</p></div>
+                    <img src="images/down-arrow.svg" width="35px" alt="down">
+                    <div class="work-point"><p><b>5.</b> Виконуємо ремонт.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-container" id="feedback">
+            <h2>Відгуки</h2>
+            <div class="feedback">
+                <p>Ви завжди можете ознайомитись або ж залишити свій відгук про нашу роботу</p>
+                <a href="#"></a>
+            </div>
+        </div>
     </div>
 
 <!--    Footer-->
@@ -63,7 +99,7 @@
             <div class="location">
                 <p>Чернівці та <br> Чернівецька область</p>
             </div>
-            <div class="phone-wrap">
+            <div class="phone-wrap" id="contacts">
                 <p class="width-phone">
                     <a href="tel:066-465-3565">+38 (066) 465-35-65</a><br>
                     <a href="tel:068-130-3826">+38 (068) 130-38-26</a>
@@ -76,6 +112,7 @@
         <p class="footer-details">Ремонт холодильників без посередників, можливий виїзд за місто</p>
         <p class="copyright">© 2021 Ремонт холодильників Чернівці</p>
     </footer>
+    <a href="tel:066-465-3565" class="call-us-btn"></a>
 
     <script src="jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>

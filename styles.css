@@ -84,7 +84,42 @@ nav a:hover {
 .phone-wrap.mobile a{
     color: #ffffff;
 }
-.phone-wrap:before {
+.call-us-btn {
+    position: fixed;
+    bottom: 20%;
+    right: 70px;
+    background: #8d9296;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    box-shadow: 1px 1px 20px rgba(0,140,174,0.7);
+    animation: bingc-phone-button-animation 6s ease-in-out infinite;
+}
+.call-us-btn:before {
+    content: '';
+    background-image: url("images/phone-call-red.svg");
+    transform: rotate(270deg);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+@keyframes bingc-phone-button-animation{
+    0%,10%,100% {
+        -webkit-transform:rotate(0) scale(1) skew(1deg);
+        transform:rotate(0) scale(1) skew(1deg)
+    }
+    2%, 6% {
+        -webkit-transform:rotate(-15deg) scale(1) skew(1deg);
+        transform:rotate(-15deg) scale(1) skew(1deg)
+    }4%,8% {
+         -webkit-transform:rotate(15deg) scale(1) skew(1deg);
+             transform:rotate(15deg) scale(1) skew(1deg)
+         }
+}
+nav .phone-wrap:before {
+    content: '';
+    background-image: url("images/phone-call-purple.svg");
+}
+footer .phone-wrap:before {
     content: '';
     background-image: url("images/phone-call.svg");
 }
@@ -142,6 +177,7 @@ footer .phone-wrap a:hover{
     width: 100%;
     background-size: cover;
     position: relative;
+    margin-top: 90px;
 }
 .banner-text {
     position: absolute;
@@ -163,16 +199,127 @@ footer .phone-wrap a:hover{
     text-transform: uppercase;
     margin-top: 20px;
 }
-.banner-overlay {
-    background: rgba(0,0,0,0.7);
+.banner-overlay,.scheme-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
 }
+.banner-overlay {
+    background: rgba(0,0,0,0.55);
+}
+.scheme-overlay {
+    background: rgba(255,255,255,0.55);
+}
+.advant-cont {
+    padding: 70px 60px;
+}
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item{
+    width: 43%;
+    box-shadow: 1px 1px 30px rgba(160,167,174,0.3);
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+.item span {
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 10px;
+}
+.item:before {
+    margin: 0 15px;
+}
+.car:before {
+    content: '';
+    background-image: url("images/car.svg");
+}
+.person:before {
+    content: '';
+    background-image: url("images/person.svg");
+}
+.quality:before {
+    content: '';
+    background-image: url("images/quality.svg");
+}
+.experience:before {
+    content: '';
+    background-image: url("images/diploma.svg");
+}
+.work-scheme {
+    padding: 70px 0;
+    background-image: url("images/banner2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 560px;
+}
+.scheme-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 60px;
+}
+.main h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.work-line img {
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+.work-point {
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 1px 1px 30px rgba(160,167,174,0.7);
+    background: #fff;
+    border-radius: 10px;
+}
+.main p {
+    font-size: 20px;
+    padding: 15px;
+}
+.work-point b {
+    color: #8b0000;
+    padding-right: 20px;
+}
+.feedback-container {
+    margin: 60px auto;
+    padding: 0 40px;
+}
+.feedback-container h2 {
+    margin-bottom: 15px;
+}
+.feedback{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+.feedback a:before {
+    content: '';
+    background-image: url("images/facebook.svg");
+}
+.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 1px 1px 10px rgba(160,167,174,0.7);
+}
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1110px){
     .mobile-menu, .close-menu, .overlay {
         display: block;
     }
@@ -229,6 +376,10 @@ footer .phone-wrap a:hover{
 }
 
 @media screen and (max-width: 868px){
+    .call-us-btn {
+        bottom: 10%;
+        right: 55px;
+    }
     nav .phone-wrap {
         display: none;
     }
@@ -259,6 +410,16 @@ footer .phone-wrap a:hover{
     .banner-text p, .banner-text h2 {
         padding: 0 30px;
     }
+    .main h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 758px){
+    .item {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 475px){
@@ -272,9 +433,13 @@ footer .phone-wrap a:hover{
         width: 40px;
         height: 40px;
     }
+    .call-us-btn:before {
+        width: 50px;
+        height: 50px;
+    }
     footer p, footer a {
         font-size: 13px;
-        margin: 8px 0;
+        margin: 8px 0 0;
     }
     .content-footer {
         padding: 40px 45px;
@@ -298,6 +463,24 @@ footer .phone-wrap a:hover{
         font-size: 15px;
     }
     .banner-text p, .banner-text h2 {
+        padding: 0 40px;
+    }
+    .main h2 {
+        font-size: 20px;
+    }
+    .main p {
+        font-size: 15px;
+    }
+    .work-point b {
+        padding-right: 5px;
+    }
+    .advant-cont {
+        padding: 50px 40px;
+    }
+    .work-scheme {
+        padding: 50px 0;
+    }
+    .scheme-content {
         padding: 0 40px;
     }
 }
