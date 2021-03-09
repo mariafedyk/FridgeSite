@@ -191,7 +191,7 @@ footer .phone-wrap a:hover{
 .banner-text p, .banner-text h2 {
     color: #ffffff;
 }
-.banner-text h2 {
+.main .banner-text h2 {
     font-size: 45px;
 }
 .banner-text p {
@@ -233,6 +233,7 @@ footer .phone-wrap a:hover{
     top: 50%;
     transform: translateY(-50%);
     padding-right: 10px;
+    font-size: 20px;
 }
 .item:before {
     margin: 0 15px;
@@ -468,7 +469,7 @@ footer .phone-wrap a:hover{
     .main h2 {
         font-size: 20px;
     }
-    .main p {
+    .main p, .item span {
         font-size: 15px;
     }
     .work-point b {
