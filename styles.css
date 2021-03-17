@@ -402,13 +402,13 @@ footer .phone-wrap a:hover{
     .banner-text {
         margin-top: 100px;
     }
-    .banner-text h2 {
+    .main .banner-text h2 {
         font-size: 35px;
     }
     .banner-text p {
         font-size: 20px;
     }
-    .banner-text p, .banner-text h2 {
+    .banner-text p, .main .banner-text h2 {
         padding: 0 30px;
     }
     .main h2 {
@@ -457,13 +457,13 @@ footer .phone-wrap a:hover{
     .main-banner {
         height: 300px;
     }
-    .banner-text h2 {
+    .main .banner-text h2 {
         font-size: 22px;
     }
     .banner-text p {
         font-size: 15px;
     }
-    .banner-text p, .banner-text h2 {
+    .banner-text p, .main .banner-text h2 {
         padding: 0 40px;
     }
     .main h2 {
