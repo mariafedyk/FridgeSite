@@ -115,19 +115,24 @@ nav a:hover {
              transform:rotate(15deg) scale(1) skew(1deg)
          }
 }
-nav .phone-wrap:before {
-    content: '';
-    background-image: url("images/phone-call-purple.svg");
-}
-footer .phone-wrap:before {
-    content: '';
-    background-image: url("images/phone-call.svg");
-}
 .width-phone {
-    margin: 5px;
+    width: max-content;
+    margin: auto;
 }
 .width-phone a {
     font-weight: 600;
+}
+.width-phone a:before {
+    width: 20px;
+    height: 20px;
+}
+.viber:before {
+    content: '';
+    background-image: url("images/viber.svg");
+}
+.telegram:before {
+    content: '';
+    background-image: url("images/telegram.svg");
 }
 footer {
     background: #8d9296;
@@ -188,13 +193,19 @@ footer .phone-wrap a:hover{
     text-align: center;
     margin-top: 165px;
 }
-.banner-text p, .banner-text h2 {
+.banner-text p, .banner-text h2, .banner-text a, .banner-text span {
     color: #ffffff;
+}
+.banner-text span {
+    white-space: nowrap;
+}
+.banner-text a {
+    font-weight: 700;
 }
 .main .banner-text h2 {
     font-size: 45px;
 }
-.banner-text p {
+.banner-text p, .banner-text a {
     font-size: 25px;
     text-transform: uppercase;
     margin-top: 20px;
@@ -237,22 +248,8 @@ footer .phone-wrap a:hover{
 }
 .item:before {
     margin: 0 15px;
-}
-.car:before {
     content: '';
-    background-image: url("images/car.svg");
-}
-.person:before {
-    content: '';
-    background-image: url("images/person.svg");
-}
-.quality:before {
-    content: '';
-    background-image: url("images/quality.svg");
-}
-.experience:before {
-    content: '';
-    background-image: url("images/diploma.svg");
+    background-image: url("images/fridge.svg");
 }
 .work-scheme {
     padding: 70px 0;
@@ -299,17 +296,14 @@ footer .phone-wrap a:hover{
     margin: 60px auto;
     padding: 0 40px;
 }
+iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 10px rgba(160,167,174,0.7);
+}
 .feedback-container h2 {
     margin-bottom: 15px;
-}
-.feedback{
-    display: flex;
-    width: fit-content;
-    margin: auto;
-}
-.feedback a:before {
-    content: '';
-    background-image: url("images/facebook.svg");
 }
 .fix {
     position: fixed;
@@ -405,10 +399,10 @@ footer .phone-wrap a:hover{
     .main .banner-text h2 {
         font-size: 35px;
     }
-    .banner-text p {
+    .banner-text p, .banner-text a {
         font-size: 20px;
     }
-    .banner-text p, .main .banner-text h2 {
+    .banner-text p, .banner-text a, .main .banner-text h2 {
         padding: 0 30px;
     }
     .main h2 {
@@ -417,13 +411,13 @@ footer .phone-wrap a:hover{
 
 }
 
-@media screen and (max-width: 758px){
+@media screen and (max-width: 1056px){
     .item {
         width: 100%;
     }
 }
 
-@media screen and (max-width: 475px){
+@media screen and (max-width: 564px){
     nav {
         padding: 20px 30px;
     }
@@ -441,6 +435,9 @@ footer .phone-wrap a:hover{
     footer p, footer a {
         font-size: 13px;
         margin: 8px 0 0;
+    }
+    footer .width-phone a {
+        display: block;
     }
     .content-footer {
         padding: 40px 45px;
@@ -460,8 +457,14 @@ footer .phone-wrap a:hover{
     .main .banner-text h2 {
         font-size: 22px;
     }
-    .banner-text p {
+    .banner-text p, .banner-text a {
         font-size: 15px;
+    }
+    .banner-text a {
+        padding: 0;
+    }
+    .main .banner-text h2 {
+        margin-bottom: 0;
     }
     .banner-text p, .main .banner-text h2 {
         padding: 0 40px;
@@ -471,6 +474,16 @@ footer .phone-wrap a:hover{
     }
     .main p, .item span {
         font-size: 15px;
+    }
+    .item:before {
+        margin: 0;
+    }
+    .item span {
+        position: static;
+        transform: none;
+        padding-right: 0;
+        float: right;
+        width: 75%;
     }
     .work-point b {
         padding-right: 5px;
