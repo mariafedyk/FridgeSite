@@ -33,4 +33,23 @@ $(document).ready(function () {
         $('body').removeClass('active');
     });
 
+    $('#read-more').click(function () {
+        $('.open-ul').toggleClass('opened');
+        $('.models-in').toggleClass('opened-ul');
+
+        if ($('.open-ul').hasClass('opened')) {
+            $('.open-ul').show(1000);
+        }
+        else {
+            $('.open-ul').hide(1000);
+        }
+
+        if($('.models-in').hasClass('opened-ul')) {
+            $('#read-more').text('Закрити');
+        }
+        else {
+            $('#read-more').text('Більше');
+        }
+    });
+
 });

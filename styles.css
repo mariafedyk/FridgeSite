@@ -313,6 +313,35 @@ iframe {
     z-index: 100;
     box-shadow: 1px 1px 10px rgba(160,167,174,0.7);
 }
+.models {
+    background-image: url("images/fridgeback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.models-in {
+    background: rgba(255,255,255,0.6);
+    padding: 70px;
+}
+.models h2 {
+    margin-bottom: 5px;
+}
+.models-in p {
+    text-align: center;
+}
+.list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.models li {
+    font-weight: 500;
+    padding: 6px;
+    list-style: square;
+}
+.read-more-btn {
+    display: none;
+}
 
 @media screen and (max-width: 1110px){
     .mobile-menu, .close-menu, .overlay {
@@ -408,7 +437,9 @@ iframe {
     .main h2 {
         font-size: 25px;
     }
-
+    .list ul {
+        width: 30%;
+    }
 }
 
 @media screen and (max-width: 1056px){
@@ -496,5 +527,24 @@ iframe {
     }
     .scheme-content {
         padding: 0 40px;
+    }
+    .read-more-btn {
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        color: #8b0000;
+        line-height: 50px;
+    }
+    .list ul {
+        width: 100%;
+    }
+    .open-ul, .main {
+        margin: 0;
+    }
+    .open-ul {
+        display: none;
+    }
+    .list {
+        display: block;
     }
 }
